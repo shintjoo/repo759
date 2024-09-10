@@ -13,3 +13,6 @@
 
 # An error file called FirstSlurm.err
 #SBATCH --error=FirstSlurm.err
+
+#Run a single command to print the hostname of the machine (compute node) running the job.
+hostname
