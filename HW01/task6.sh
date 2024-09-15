@@ -16,3 +16,6 @@ g++ task6.cpp -Wall -O3 -std=c++17 -o task6
 
 #run task6
 ./task6 6
+
+squeue -u skzhu
+echo "Job starts in directory: $(pwd)"
