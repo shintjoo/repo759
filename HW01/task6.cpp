@@ -19,7 +19,8 @@ int main(int argc, char *argv[]) {
         }
         std::printf("%d", i);
     }
-
+    std::printf("\n"); 
+    
     // Print out each integer in descending order using std::cout
     for (int i = N; i >= 0; --i) {
         if (i < N) {

@@ -5,15 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(g++ build and debug task6.cpp)",
+            "name": "Debug Task6",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\task6", // Executable name after compilation
-            "args": ["6"], // Command line argument N = 6 (you can change it to any value)
+            "program": "${workspaceFolder}\\HW01\\task6",
+            "args": ["4"],
             "stopAtEntry": false,
-            "cwd": "$HW01",
+            "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true, // Opens an external console
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -22,12 +22,11 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "g++ build task6.cpp", // Refers to the task for building
-            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe", // Adjust path if you're on macOS/Windows
-            "targetArchitecture": "x86_64",
+            "preLaunchTask": "build task6",
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
+            "internalConsoleOptions": "openOnSessionStart",
             "logging": {
-                "trace": true,
-                "traceResponse": true
+                "engineLogging": true
             }
         }
     ]

@@ -4,20 +4,22 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "g++ build task6.cpp",
+            "label": "build task6",
             "type": "shell",
-            "command": "C:\\msys64\\mingw64\\bin\\gdb.exe", // On Windows, replace with the path to g++.exe (e.g., C:/MinGW/bin/g++.exe)
+            "command": "C:/msys64/mingw64/bin/g++.exe",
             "args": [
-                "-g", // Generates debugging symbols
-                "${workspaceFolder}\\task6.cpp", // The source file to compile
-                "-o", "${workspaceFolder}\\task6" // Output executable
+                "-Wall",
+                "-O3",
+                "-std=c++17",
+                "${workspaceFolder}\\HW01\\task6.cpp",
+                "-o",
+                "${workspaceFolder}\\HW01\\task6"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": ["$gcc"],
-            "detail": "Generated task for building task6.cpp"
+            "problemMatcher": ["$gcc"]
         }
     ]
 }
