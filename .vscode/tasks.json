@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "g++ build task6.cpp",
+            "type": "shell",
+            "command": "C:\\msys64\\mingw64\\bin\\gdb.exe", // On Windows, replace with the path to g++.exe (e.g., C:/MinGW/bin/g++.exe)
+            "args": [
+                "-g", // Generates debugging symbols
+                "${workspaceFolder}\\task6.cpp", // The source file to compile
+                "-o", "${workspaceFolder}\\task6" // Output executable
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building task6.cpp"
+        }
+    ]
+}

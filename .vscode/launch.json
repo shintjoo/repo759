@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(g++ build and debug task6.cpp)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\task6", // Executable name after compilation
+            "args": ["6"], // Command line argument N = 6 (you can change it to any value)
+            "stopAtEntry": false,
+            "cwd": "$HW01",
+            "environment": [],
+            "externalConsole": true, // Opens an external console
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "g++ build task6.cpp", // Refers to the task for building
+            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe", // Adjust path if you're on macOS/Windows
+            "targetArchitecture": "x86_64",
+            "logging": {
+                "trace": true,
+                "traceResponse": true
+            }
+        }
+    ]
+}
