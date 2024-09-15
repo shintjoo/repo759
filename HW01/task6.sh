@@ -12,7 +12,7 @@
 #SBATCH -e zhuHW1T6.err
 
 #compile task6.cpp
-g++ task6.cpp-Wall-O3-std=c++17-o task6
+g++ task6.cpp -Wall-O3-std=c++17-o task6
 
 #run task6
 ./task6 6
