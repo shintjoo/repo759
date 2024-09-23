@@ -56,11 +56,16 @@ int main(int argc, char* argv[]) {
 
     // Print out time taken for scan
     std::cout << "Runtime: " << duration.count() << " milliseconds"<< std::endl;
-    for (int i = 0; i < n; i++) {
-        std::cout << "Input " << inputArray[i] << std::endl;
-        std::cout << "Output " << outputArray[i] << std::endl;
-    }
-    //std::cout << "Last element: " << outputArray[n - 1] << std::endl;
+    std::cout << "First element: " << outputArray[0] << std::endl;
+    std::cout << "Last element: " << outputArray[n - 1] << std::endl;
+    
+    //used for testing
+    // for (int i = 0; i < n; i++) {
+    //     std::cout << "Input " << inputArray[i] << std::endl;
+    //     std::cout << "Output " << outputArray[i] << std::endl;
+    // }
+    
+    
 
     // Free allocated memory
     free(inputArray);
