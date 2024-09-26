@@ -9,12 +9,17 @@
 #include <iostream>
 #include <chrono>
 #include "scan.h"
+#include <random>
 
 int main(int argc, char* argv[]) {
     // Local variable declaration
     int n;
     float* inputArray;
     float* outputArray;
+
+    // Variables needed for the Mersenne Twister Enginer
+    int some_seed = 759;
+    std::mt19937 generator(some_seed);
 
     // Take in n as the first command line arguement
     // Check if the correct number of arguments is provided
@@ -33,9 +38,14 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    srand(time(0));
+    
+    std::uniform_real_distribution<float> distribution(-1.0f, 1.0f);
+    //float pseudorandom_float = distribution(generator);
+
+    //srand(time(0));
     for (int i = 0; i < n; i++) {
-        inputArray[i] = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX) / 2) - 1.0f;
+        //inputArray[i] = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX) / 2) - 1.0f;
+        inputArray[i] = distribution(generator);
     }
 
     // Start Timer
@@ -60,10 +70,10 @@ int main(int argc, char* argv[]) {
     std::cout << "Last element: " << outputArray[n - 1] << std::endl;
     
     //used for testing
-    // for (int i = 0; i < n; i++) {
-    //     std::cout << "Input " << inputArray[i] << std::endl;
-    //     std::cout << "Output " << outputArray[i] << std::endl;
-    // }
+    for (int i = 0; i < n; i++) {
+        std::cout << "Input " << inputArray[i] << std::endl;
+        std::cout << "Output " << outputArray[i] << std::endl;
+    }
     
     
 
