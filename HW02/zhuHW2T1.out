@@ -1,21 +1,18 @@
-1024,Runtime: 0.002783 milliseconds
-2048,Runtime: 0.005078 milliseconds
-4096,Runtime: 0.011846 milliseconds
-8192,Runtime: 0.023474 milliseconds
-16384,Runtime: 0.045488 milliseconds
-32768,Runtime: 0.097588 milliseconds
-65536,Runtime: 0.181544 milliseconds
-131072,Runtime: 0.331313 milliseconds
-262144,Runtime: 0.657552 milliseconds
-524288,Runtime: 1.33305 milliseconds
-1048576,Runtime: 2.68987 milliseconds
-2097152,Runtime: 5.50978 milliseconds
-4194304,Runtime: 12.7983 milliseconds
-8388608,Runtime: 25.7252 milliseconds
-16777216,Runtime: 51.8566 milliseconds
-33554432,Runtime: 103.199 milliseconds
-67108864,Runtime: 205.687 milliseconds
-134217728,Runtime: 410.859 milliseconds
-268435456,Runtime: 940.464 milliseconds
-536870912,Runtime: 9374.43 milliseconds
-1073741824,Runtime: 18600.1 milliseconds
+1024,0.003114
+2048,0.005134
+4096,0.012838
+8192,0.023509
+16384,0.046312
+32768,0.09621
+65536,0.196497
+131072,0.381346
+262144,0.768456
+524288,1.60978
+1048576,3.14228
+2097152,6.28105
+4194304,12.7423
+8388608,25.8143
+16777216,51.8399
+33554432,103.669
+67108864,205.778
+134217728,410.621
