@@ -11,6 +11,8 @@
 
 #SBATCH -e zhuHW2T1.err
 
+output_file="zhuHW2T1.out"
+
 #compile task1.cpp and scan.cpp
 g++ task1.cpp scan.cpp -Wall -O3 -std=c++17 -o task1
 
