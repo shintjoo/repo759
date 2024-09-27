@@ -37,7 +37,11 @@ int main(int argc, char* argv[]) {
         std::cerr << "Malloc failed for inputArray.\n";
         return 1;
     }
-
+    outputArray = (float*)malloc(n * sizeof(float));
+    if (!outputArray) {
+        std::cerr << "Malloc failed for outputArray.\n";
+        return 1;
+    }
     
     std::uniform_real_distribution<float> distribution(-1.0f, 1.0f);
     //float pseudorandom_float = distribution(generator);
@@ -52,17 +56,11 @@ int main(int argc, char* argv[]) {
     auto start_time = std::chrono::high_resolution_clock::now();
 
     // Run scan function
-    outputArray = scanFunction(inputArray, n);
+    scan(inputArray, outputArray, n);
 
     // Stop Timer
     auto end_time = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration<float, std::milli>(end_time - start_time);
-
-    // This needs to be outside the timer as to not affect the duration
-    if (!outputArray) {
-        std::cerr << "Malloc failed for outputArray.\n";
-        return 1;
-    }
 
     // Print out time taken for scan
     std::cout << duration.count() << std::endl;
@@ -77,8 +75,6 @@ int main(int argc, char* argv[]) {
     //     std::cout << "Input " << inputArray[i] << std::endl;
     //     std::cout << "Output " << outputArray[i] << std::endl;
     // }
-    
-    
 
     // Free allocated memory
     free(inputArray);

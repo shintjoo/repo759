@@ -7,23 +7,14 @@
  */
 
 #include "scan.h"
-#include <cstdlib>
 
-float* scanFunction(const float* inputArray, int n) {
-    // Allocate memory for the output array
-    float* outputArray = (float*)malloc(n * sizeof(float));
-    
-    // Memory allocation failed
-    if (!outputArray) {
-        return nullptr;  
+void scan(const float *arr, float *output, std::size_t n) {
+    if (n == 0) {
+        return; // No elements to process
     }
 
-    // Perform the inclusive scan
-    outputArray[0] = inputArray[0];  // The first element is the same
-    for (int i = 1; i < n; i++) {
-        // Compute the sum for the output array
-        outputArray[i] = outputArray[i - 1] + inputArray[i];
+    output[0] = arr[0]; // The first element is the same
+    for (std::size_t i = 1; i < n; ++i) {
+        output[i] = output[i - 1] + arr[i]; // Perform the scan
     }
-
-    return outputArray;
 }
