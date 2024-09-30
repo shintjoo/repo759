@@ -24,27 +24,27 @@ void convolve(const float *image, float *output, std::size_t n, const float *mas
     int offset = (m - 1) / 2;
 
     // Run through every pixel in image
-    for (int x = 0; x < n; x++){
-        for (int y = 0; y < n; y++){
+    for (std::size_t x = 0; x < n; x++){
+        for (std::size_t y = 0; y < n; y++){
             // This is the output pixel location. Initialize to 0
             output[x * n + y] = 0.0f;
 
             // Apply mask
-            for (int i = 0; i < m; i++){
-                for (int j = 0; j < m; j++){
+            for (std::size_t i = 0; i < m; i++){
+                for (std::size_t j = 0; j < m; j++){
                     // Calculate indicies in f(x + i - (m-1)/2), y + j - (m-1)/2))
                     imgX = x + i - ((m-1) >> 1);
                     imgY = y + j - ((m-1) >> 1);
 
-                    if (imgX >= 0 && imgX < n && imgY >= 0 && imgY < n) {
+                    if (imgX >= 0 && imgX < int(n)  && imgY >= 0 && imgY < int(n) ) {
                         // In bounds: use the image pixel
                         pixelVal = image[imgX * n + imgY];  
 
                     } 
                     else if ((imgX == -offset && imgY == -offset) || 
-                            (imgX == -offset && imgY == n + offset - 1) || 
-                            (imgX == n + offset - 1 && imgY == -offset) || 
-                            (imgX == n + offset - 1 && imgY == n + offset - 1)) {
+                            (imgX == -offset && imgY == int(n) + offset - 1) || 
+                            (imgX == int(n)  + offset - 1 && imgY == -offset) || 
+                            (imgX == int(n)  + offset - 1 && imgY == int(n)  + offset - 1)) {
                         // Corner padding        
                         pixelVal = 0.0f; 
 

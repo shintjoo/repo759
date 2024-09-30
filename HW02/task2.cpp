@@ -42,11 +42,11 @@ int main(int argc, char** argv) {
     std::uniform_real_distribution<float> dist_mask(-1.0, 1.0); // uniform distribution between -1.0 and 1.0
     std::uniform_real_distribution<float> dist_image(-10.0, 10.0); // uniform distribution between -10.0 and 10.0
 
-    for (int i = 0; i < m*m; i++) {
+    for (std::size_t i = 0; i < m*m; i++) {
         mask[i] = dist_mask(generator);
     }
 
-    for (int j = 0; j < n*n; j++) {
+    for (std::size_t j = 0; j < n*n; j++) {
         image[j] = dist_image(generator);
     }
 
