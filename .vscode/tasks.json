@@ -4,17 +4,17 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build task1",
+            "label": "build task2",
             "type": "shell",
             "command": "C:/msys64/mingw64/bin/g++.exe",
             "args": [
-                "${workspaceFolder}\\HW02\\scan.cpp",
+                "${workspaceFolder}\\HW02\\convolution.cpp",
                 "-Wall",
                 "-O3",
                 "-std=c++17",
-                "${workspaceFolder}\\HW02\\task1.cpp",
+                "${workspaceFolder}\\HW02\\task2.cpp",
                 "-o",
-                "${workspaceFolder}\\HW02\\task1"
+                "${workspaceFolder}\\HW02\\task2"
             ],
             "group": {
                 "kind": "build",

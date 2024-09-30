@@ -42,9 +42,9 @@ void convolve(const float *image, float *output, std::size_t n, const float *mas
 
                     } 
                     else if ((imgX == -offset && imgY == -offset) || 
-                            (imgX == -offset && imgY == n - offset - 1) || 
-                            (imgX == n - offset - 1 && imgY == -offset) || 
-                            (imgX == n - offset - 1 && imgY == n - offset - 1)) {
+                            (imgX == -offset && imgY == n + offset - 1) || 
+                            (imgX == n + offset - 1 && imgY == -offset) || 
+                            (imgX == n + offset - 1 && imgY == n + offset - 1)) {
                         // Corner padding        
                         pixelVal = 0.0f; 
 

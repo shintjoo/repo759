@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
     // Take in n as the first command line arguement
     // Check if the correct number of arguments is provided
     if (argc < 2) {
-        std::cerr << "Error: Please provide an integer n as a command-line argument." << std::endl;
+        std::cerr << "Error: Incorrect command-line argument." << std::endl;
         return 1;
     }
 
