@@ -65,14 +65,14 @@ int main(int argc, char** argv) {
     std::cout << output[0] << std::endl;
     std::cout << output[(n*n) - 1] << std::endl;
 
-    // Print the entire output array
-    std::cout << "Output array (convolved image):" << std::endl;
+   /*  // Print the entire output array (Used for testing)
+    std::cout << "Output array:" << std::endl;
     for (size_t i = 0; i < n; i++) {
         for (size_t j = 0; j < n; j++) {
             std::cout << output[i * n + j] << " ";
         }
         std::cout << std::endl;
-    }
+    } */
 
     // Deallocate memory
     delete[] mask;
