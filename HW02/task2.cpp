@@ -1,6 +1,6 @@
 /**
  * Shawn Zhu
- * convolution.cpp
+ * task2.cpp
  * 
  * Credit:
  * 
