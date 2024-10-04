@@ -16,12 +16,12 @@ int main(int argc, char** argv) {
     // Local variable declaration
     int n = 1024;
 
-    double *A = (double *)malloc(sizeof(double)*n*n);
-    double *B = (double *)malloc(sizeof(double)*n*n);
-    double *C1 = (double *)malloc(sizeof(double)*n*n);
-    double *C2 = (double *)malloc(sizeof(double)*n*n);
-    double *C3 = (double *)malloc(sizeof(double)*n*n);
-    double *C4 = (double *)malloc(sizeof(double)*n*n);
+    double *A = new double[n*n];
+    double *B = new double[n*n];
+    double *C1 = new double[n*n];
+    double *C2 = new double[n*n];
+    double *C3 = new double[n*n];
+    double *C4 = new double[n*n];
     std::vector<double> vectorA;
     std::vector<double> vectorB;
 
