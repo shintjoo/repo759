@@ -2,7 +2,7 @@
  * Shawn Zhu
  * matmul.cpp
  * 
- * Credit:
+ * Credit: Completed on my own
  * 
  */
 #include "matmul.h"

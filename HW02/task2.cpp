@@ -2,7 +2,7 @@
  * Shawn Zhu
  * task2.cpp
  * 
- * Credit:
+ * Credit: Basically took task1.cpp and modified accordingly
  * 
  */
 

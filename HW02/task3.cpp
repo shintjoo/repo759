@@ -2,7 +2,7 @@
  * Shawn Zhu
  * task3.cpp
  * 
- * Credit:
+ * Credit: Completed on my own
  * 
  */
 

@@ -2,7 +2,7 @@
  * Shawn Zhu
  * convolution.cpp
  * 
- * Credit:
+ * Credit: Referenced github user b1urberry to understand how the function should work then completed on my own.
  * 
  */
 

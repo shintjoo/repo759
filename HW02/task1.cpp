@@ -2,7 +2,7 @@
  * Shawn Zhu
  * task1.cpp
  * 
- * Credit:
+ * Credit: Mostly on my own but referenced ChatGPT for randomizing
  * 
  */
 
@@ -45,8 +45,8 @@ int main(int argc, char* argv[]) {
     
     std::uniform_real_distribution<float> distribution(-1.0f, 1.0f);
     //float pseudorandom_float = distribution(generator);
-
     //srand(time(0));
+    
     for (int i = 0; i < n; i++) {
         //inputArray[i] = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX) / 2) - 1.0f;
         inputArray[i] = distribution(generator);

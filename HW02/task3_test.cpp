@@ -1,8 +1,8 @@
 /**
  * Shawn Zhu
- * task3.cpp
+ * task3_test.cpp
  * 
- * Credit:
+ * Credit: Completed on my own. Modified test3.cpp
  * 
  */
 

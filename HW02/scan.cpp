@@ -2,7 +2,7 @@
  * Shawn Zhu
  * scan.cpp
  * 
- * Credit:
+ * Credit: Completed alone
  * 
  */
 
