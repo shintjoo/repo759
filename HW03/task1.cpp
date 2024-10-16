@@ -11,10 +11,21 @@
 #include <chrono>
 #include "matmul.h"
 #include <vector>
+#include <omp.h>
 
 int main(int argc, char** argv) {
+    // Check if the correct number of arguments is provided
+    if (argc < 2) {
+        std::cerr << "Error: Please provide an integer N as a command-line argument." << std::endl;
+        return 1;
+    }
+
+    // Get the integer that is given in the command line (Assuming it is an integer)
+    int n = std::atoi(argv[1]);
+    omp_set_num_threads(std::atoi(argv[2]));
+    
     // Local variable declaration
-    int n = 1024;
+    // int n = 1024;
 
     float *A = new float[n*n];
     float *B = new float[n*n];

@@ -2,7 +2,7 @@
  * Shawn Zhu
  * convolution.cpp
  * 
- * Credit: Referenced github user b1urberry to understand how the function should work then completed on my own.
+ * Credit: Copied from HW02
  * 
  */
 
@@ -24,6 +24,7 @@ void convolve(const float *image, float *output, std::size_t n, const float *mas
     int offset = (m - 1) / 2;
 
     // Run through every pixel in image
+    #pragma omp parallel for collapse(2)
     for (std::size_t x = 0; x < n; x++){
         for (std::size_t y = 0; y < n; y++){
             // This is the output pixel location. Initialize to 0
