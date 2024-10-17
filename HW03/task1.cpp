@@ -1,8 +1,8 @@
 /**
  * Shawn Zhu
- * task3.cpp
+ * task1.cpp
  * 
- * Credit: Completed on my own
+ * Credit: Copied from HW02
  * 
  */
 
