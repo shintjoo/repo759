@@ -4,17 +4,17 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build task1",
+            "label": "build task2",
             "type": "shell",
             "command": "C:/msys64/mingw64/bin/g++.exe",
             "args": [
-                "${workspaceFolder}\\HW03\\matmul.cpp",
+                "${workspaceFolder}\\HW03\\convolution.cpp",
                 "-Wall",
                 "-O3",
                 "-std=c++17",
-                "${workspaceFolder}\\HW03\\task1.cpp",
+                "${workspaceFolder}\\HW03\\task2.cpp",
                 "-o",
-                "${workspaceFolder}\\HW03\\task1",
+                "${workspaceFolder}\\HW03\\task2",
                 "-fopenmp"
             ],
             "group": {
