@@ -57,56 +57,46 @@ void serial_msort(int* arr, std::size_t n) {
 
 }
 
-void msort(int* arr, const std::size_t n, const std::size_t threshold){
-    /** 3 cases. 
-     * Size is <= 1 so it doesn't need to be sorted
-     * Size is less than the threshold -> serial sort
-     * Size is more than the threshold -> parallel sort
-     */
-
-    // Case 1: Size is <= 1
+// Parallel merge sort using OpenMP tasks
+void parallel_msort(int* arr, std::size_t n, std::size_t threshold) {
     if (n <= 1) {
-        return;
+        return; 
     }
 
-    // Case 2: Size is less than threshold
     if (n <= threshold) {
         serial_msort(arr, n);
-        return;
+    } else {
+        std::size_t mid = n / 2;
+        int* left = new int[mid];
+        int* right = new int[n - mid];
+
+        std::copy(arr, arr + mid, left);
+        std::copy(arr + mid, arr + n, right);
+
+        // Use OpenMP tasks for parallel recursive sorting
+        #pragma omp task shared(left, mid, threshold)
+        parallel_msort(left, mid, threshold);
+
+        #pragma omp task shared(right, n, mid, threshold)
+        parallel_msort(right, n - mid, threshold);
+
+        // Wait for both tasks to complete
+        #pragma omp taskwait
+
+        merge(arr, left, mid, right, n - mid);
+
+        delete[] left;
+        delete[] right;
     }
+}
 
-    // Divide the array into two halves
-    std::size_t mid = n / 2;
-    int* left = new int[mid];
-    int* right = new int[n - mid];
 
-    std::copy(arr, arr + mid, left);
-    std::copy(arr + mid, arr + n, right);
-
-    // Sort both halves in parallel
+void msort(int* arr, const std::size_t n, const std::size_t threshold) {
     #pragma omp parallel
     {
         #pragma omp single
         {
-            #pragma omp task
-            {
-                msort(left, mid, threshold);
-            }
-            #pragma omp task
-            {
-                msort(right, n - mid, threshold);
-            }
-
-            // Wait for both tasks to complete. Needed to synchronize tasks before merging or else merging may be incorrect
-            #pragma omp taskwait
+            parallel_msort(arr, n, threshold);
         }
     }
-
-    // Merge the sorted halves
-    merge(arr, left, mid, right, n - mid);
-
-    delete[] left;
-    delete[] right;
-
-
 }
