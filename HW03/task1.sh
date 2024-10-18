@@ -4,12 +4,12 @@
 #SBATCH -t 0-00:30:00
 
 #SBATCH -J zhuHW3T1
-#SBATCH -o zhuHW2T1.out
-#SBATCH -e zhuHW2T1.err
+#SBATCH -o zhuHW3T1.out
+#SBATCH -e zhuHW3T1.err
 
 #SBATCH --cpus-per-task=20
 
-output_file="zhuHW2T1.csv"
+output_file="zhuHW3T1.csv"
 
 # Compile the code (assuming mmul.cpp and task1.cpp are in the same directory)
 g++ task1.cpp matmul.cpp -O3 -fopenmp -o task1
