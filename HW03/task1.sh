@@ -16,7 +16,7 @@ g++ task1.cpp matmul.cpp -O3 -fopenmp -o task1
 # Run the program for t = 1 to t = 20
 for n in {1..20}; do
   # Run the program and capture the output
-  time_taken=$(./task1 1024 $n | head -n 3)
+  time_taken=$(./task1 1024 $n | head -n 1)
 
   # Write n and the corresponding time to the output file
   echo "$n,$time_taken" >> $output_file
