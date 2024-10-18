@@ -12,7 +12,7 @@
 output_file="zhuHW2T1.csv"
 
 # Compile the code (assuming mmul.cpp and task1.cpp are in the same directory)
-g++ task1.cpp mmul.cpp -O3 -fopenmp -o task1
+g++ task1.cpp matmul.cpp -O3 -fopenmp -o task1
 
 # Run the program for t = 1 to t = 20
 for n in {1..20}; do
