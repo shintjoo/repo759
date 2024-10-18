@@ -2,7 +2,8 @@
  * Shawn Zhu
  * msort.cpp
  * 
- * Credit: 
+ * Credit: Used ChatGPT. Asked it "To implement the merge sort in a way that allows parallelization" and gave it the constraints in the .c file
+ * Implementation is basically this but it didn't use OpenMp tasks so I added that
  * 
  */
 #include "msort.h"
