@@ -18,7 +18,7 @@ for t in {1..10}; do
   n=$((10**6))
   ts=$((2*t))
   # Run the program and capture the output
-  time_taken=$(./task $n 8 $ts | head -n 1)
+  time_taken=$(./task3 $n 8 $ts | head -n 1)
 
   # Write n and the corresponding time to the output file
   echo "$t,$time_taken" >> $output_file
