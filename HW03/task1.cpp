@@ -49,9 +49,9 @@ int main(int argc, char** argv) {
     auto end_time_mmul2 = std::chrono::high_resolution_clock::now();
     auto duration_mmul2 = std::chrono::duration<float, std::milli>(end_time_mmul2 - start_time_mmul2);
 
-    std::cout << n << std::endl;
-    std::cout << duration_mmul2.count() << std::endl;
+    std::cout << C[0] << std::endl;
     std::cout << C[n*n-1] << std::endl; 
+    std::cout << duration_mmul2.count() << std::endl;
 
     // Free memory
     delete[] A;
