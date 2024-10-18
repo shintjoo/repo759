@@ -2,7 +2,7 @@
 
 #SBATCH -p instruction
 #SBATCH -t 0-00:30:00
-
+#SBATCH --cpus-per-task=20 
 #SBATCH -J zhuHW3T1
 #SBATCH -o zhuHW3T1.out
 #SBATCH -e zhuHW3T1.err
