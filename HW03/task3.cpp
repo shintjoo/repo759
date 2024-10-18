@@ -44,10 +44,10 @@ int main(int argc, char* argv[]) {
     auto end_time = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration<float, std::milli>(end_time - start_time);
 
-    std::cout << duration.count() << " ms" << std::endl;
+    std::cout << duration.count() << std::endl;
     std::cout << arr[0] << std::endl;
     std::cout << arr[n-1] << std::endl;
-    std::cout << duration.count() << " ms" << std::endl;
+    std::cout << duration.count() << std::endl;
 
     std::cout << "Output array:" << std::endl;
     for (size_t i = 0; i < n; i++) {

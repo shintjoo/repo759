@@ -65,7 +65,8 @@ void parallel_msort(int* arr, std::size_t n, std::size_t threshold) {
 
     if (n <= threshold) {
         serial_msort(arr, n);
-    } else {
+    } 
+    else {
         std::size_t mid = n / 2;
         int* left = new int[mid];
         int* right = new int[n - mid];
