@@ -9,7 +9,7 @@
 #include <iostream>
 #include <random>
 #include <chrono>
-#include "matmul.h"
+#include "msort.h"
 #include <vector>
 #include <omp.h>
 
@@ -31,5 +31,29 @@ int main(int argc, char* argv[]) {
     // Variables needed for the Mersenne Twister Engine
     int some_seed = 759;
     std::mt19937 generator(some_seed);
-    std::uniform_real_distribution<float> distA(-1.0f, 1.0f);
+    std::uniform_int_distribution<int> distA(-1000, 1000);
+
+    int* arr = new int[n];
+    for (std::size_t i = 0; i < n; i++){
+        arr[i] = distA(generator);
+    }
+
+    // Time msort
+    auto start_time = std::chrono::high_resolution_clock::now();
+    msort(arr, n, ts);
+    auto end_time = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration<float, std::milli>(end_time - start_time);
+
+    std::cout << arr[0] << std::endl;
+    std::cout << arr[n-1] << std::endl;
+    std::cout << duration.count() << " ms" << std::endl;
+
+    std::cout << "Output array:" << std::endl;
+    for (size_t i = 0; i < n; i++) {
+        std::cout << arr[i] << " ";
+    }
+
+    // Clean up
+    delete[] arr;
+
 }

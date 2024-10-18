@@ -15,7 +15,7 @@
 
 int main(int argc, char** argv) {
     // Check if the correct number of arguments is provided
-    if (argc < 2) {
+    if (argc != 3) {
         std::cerr << "Error: Please provide an integer N as a command-line argument." << std::endl;
         return 1;
     }

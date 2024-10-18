@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug HW03 Task 2",
+            "name": "Debug HW03 Task 3",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\HW03\\task2",
-            "args": ["20", "2"],
+            "program": "${workspaceFolder}\\HW03\\task3",
+            "args": ["30", "5", "2"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
@@ -22,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build task2",
+            "preLaunchTask": "build task3",
             "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
             "internalConsoleOptions": "openOnSessionStart",
             "logging": {
