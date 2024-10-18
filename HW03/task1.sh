@@ -7,7 +7,6 @@
 #SBATCH -o zhuHW3T1.out
 #SBATCH -e zhuHW3T1.err
 
-#SBATCH --cpus-per-task=20
 
 output_file="zhuHW3T1.csv"
 
