@@ -22,7 +22,8 @@ int main(int argc, char** argv) {
 
     // Get the integer that is given in the command line (Assuming it is an integer)
     int n = std::atoi(argv[1]);
-    omp_set_num_threads(std::atoi(argv[2]));
+    int threads = std::atoi(argv[2]);
+    omp_set_num_threads(threads);
     
     // Local variable declaration
     // int n = 1024;
