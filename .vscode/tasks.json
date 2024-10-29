@@ -8,13 +8,13 @@
             "type": "shell",
             "command": "C:/msys64/mingw64/bin/g++.exe",
             "args": [
-                "${workspaceFolder}\\HW03\\msort.cpp",
+                //"${workspaceFolder}\\HW04\\msort.cpp",
                 "-Wall",
                 "-O3",
                 "-std=c++17",
-                "${workspaceFolder}\\HW03\\task3.cpp",
+                "${workspaceFolder}\\HW04\\task3.cpp",
                 "-o",
-                "${workspaceFolder}\\HW03\\task3",
+                "${workspaceFolder}\\HW04\\task3",
                 "-fopenmp"
             ],
             "group": {

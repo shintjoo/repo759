@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug HW03 Task 3",
+            "name": "Debug HW04 Task 3",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\HW03\\task3",
-            "args": ["30", "5", "2"],
+            "program": "${workspaceFolder}\\HW04\\task3",
+            "args": ["30", "30", "4"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
