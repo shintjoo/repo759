@@ -179,9 +179,10 @@ int main(int argc, char *argv[]) {
         // TODO: Ensure particles stay within the board limits
         #pragma omp parallel for
         for (int i = 0; i < N; i++) {
-            pos[i][0] = std::min(std::max(pos[i][0], -board_size), board_size);
-            pos[i][1] = std::min(std::max(pos[i][1], -board_size), board_size);
-            pos[i][2] = std::min(std::max(pos[i][2], -board_size), board_size);
+            for (int j = 0; j < 3; j++) {
+                if (pos[i][j] > board_size) pos[i][j] = board_size;
+                if (pos[i][j] < -board_size) pos[i][j] = -board_size;
+            }
         }
 
         // Update accelerations
