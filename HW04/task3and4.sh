@@ -6,6 +6,8 @@
 #SBATCH -o zhuHW4T4.out
 #SBATCH -e zhuHW4T4.err
 
+rm -f task3 task4static task4dynamic task4guided
+
 g++ task3.cpp -Wall -O3 -std=c++17 -fopenmp -o task3
 g++ task4static.cpp -Wall -O3 -std=c++17 -fopenmp -o task4static
 g++ task4dynamic.cpp -Wall -O3 -std=c++17 -fopenmp -o task4dynamic
