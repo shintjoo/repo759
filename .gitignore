@@ -1,0 +1,5 @@
+# Ignore error, output, and executable files
+*.err
+*.out
+*.exe
+*.json
