@@ -14,7 +14,7 @@ g++ task4dynamic.cpp -Wall -O3 -std=c++17 -fopenmp -o task4dynamic
 g++ task4guided.cpp -Wall -O3 -std=c++17 -fopenmp -o task4guided
 
 # Parameters for the simulation
-N=100    # number of particles
+N=200    # number of particles
 T=100    # simulation end time
 
 # Clear previous results
