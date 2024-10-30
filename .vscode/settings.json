@@ -57,6 +57,7 @@
         "xtr1common": "cpp",
         "xutility": "cpp",
         "random": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "fstream": "cpp"
     }
 }

@@ -131,7 +131,7 @@ int main(int argc, char *argv[]) {
     // Convert to Center-of-Mass frame
     double velCM[3] = {0.0, 0.0, 0.0};
     double totalMass = 0.0;
-    
+
     #pragma omp parallel for
     for (int i = 0; i < N; i++) {
         velCM[0] += vel[i][0] * mass[i];
@@ -210,7 +210,8 @@ int main(int argc, char *argv[]) {
 
     end = high_resolution_clock::now();
     duration_sec = std::chrono::duration_cast<duration<double, std::milli> >(end - start);
-    std::cout << "time: " << duration_sec.count() << "ms\n";
+    std::cout << num_threads << "," << duration_sec.count() << std::endl;
+
 
     return 0;
 }
