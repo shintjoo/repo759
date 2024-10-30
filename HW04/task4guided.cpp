@@ -29,7 +29,7 @@ void getAcc(const double pos[][3], const double mass[], double acc[][3], int N) 
         acc[i][2] = 0.0;
     }
 
-    #pragma omp parallel for collapse(2) schedule(guided)
+    #pragma omp parallel for schedule(guided)
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             if (i != j) {
