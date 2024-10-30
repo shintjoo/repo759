@@ -210,7 +210,7 @@ int main(int argc, char *argv[]) {
 
     end = high_resolution_clock::now();
     duration_sec = std::chrono::duration_cast<duration<double, std::milli> >(end - start);
-    std::cout << num_threads << "," << duration_sec.count() << std::endl;
+    std::cout << duration_sec.count() << "\n";
 
 
     return 0;
