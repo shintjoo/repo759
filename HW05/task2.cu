@@ -20,7 +20,7 @@ int main() {
     // Random number generation setup
     int some_seed = 759;
     std::mt19937 generator(some_seed); 
-    std::uniform_real_distribution<int> distribution(-100, 100); 
+    std::uniform_int_distribution<int> distribution(-100, 100); 
     int a = distribution(generator);
     
     // Allocate memory on the device
