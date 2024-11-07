@@ -10,7 +10,7 @@
 module load nvidia/cuda/11.8.0
 module load gcc/11.3.0
 rm -f task1
-rm -f zhuHW5T1.out zhuHW5T15.err
+
 # Compile program
 nvcc task1.cu -Xcompiler -O3 -Xcompiler -Wall -Xptxas -O3 -std=c++17 -o task1
 
