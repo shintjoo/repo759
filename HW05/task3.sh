@@ -10,6 +10,7 @@
 module load nvidia/cuda/11.8.0
 module load gcc/11.3.0
 rm -f task3
+rm -f zhuHW5T316.out
 
 # Compile program
 nvcc task3.cu vscale.cu -Xcompiler -O3 -Xcompiler -Wall -Xptxas -O3 -std=c++17 -o task3
