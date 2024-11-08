@@ -32,23 +32,9 @@ int main(int argc, char** argv) {
     cudaMalloc((void**)&dA, n * sizeof(float));
     cudaMalloc((void**)&dB, n * sizeof(float));
 
-    // Check for errors in memory allocation
-    cudaError_t err = cudaGetLastError();
-    if (err != cudaSuccess) {
-        std::cerr << "CUDA malloc error: " << cudaGetErrorString(err) << std::endl;
-        return -1;
-    }
-
     // Copy host arrays to device
     cudaMemcpy(dA, hA, n * sizeof(float), cudaMemcpyHostToDevice);
     cudaMemcpy(dB, hB, n * sizeof(float), cudaMemcpyHostToDevice);
-
-    // Check for errors in memory copy
-    err = cudaGetLastError();
-    if (err != cudaSuccess) {
-        std::cerr << "CUDA memcpy to device error: " << cudaGetErrorString(err) << std::endl;
-        return -1;
-    }
 
     // Set up CUDA event for timing
     cudaEvent_t start, stop;
@@ -67,11 +53,6 @@ int main(int argc, char** argv) {
 
     // Wait for the kernel to finish and check for errors
     cudaDeviceSynchronize();
-    err = cudaGetLastError();
-    if (err != cudaSuccess) {
-        std::cerr << "CUDA kernel launch error: " << cudaGetErrorString(err) << std::endl;
-        return -1;
-    }
 
     // Record the stop time
     cudaEventRecord(stop);
@@ -80,17 +61,10 @@ int main(int argc, char** argv) {
     // Calculate the time taken for kernel execution
     float milliseconds = 0.0f;
     cudaEventElapsedTime(&milliseconds, start, stop);
-    std::cout << "Kernel execution time: " << milliseconds << " ms" << std::endl;
+    std::cout << milliseconds << std::endl;
 
     // Copy the result back to host
     cudaMemcpy(hB, dB, n * sizeof(float), cudaMemcpyDeviceToHost);
-
-    // Check for errors in memory copy
-    err = cudaGetLastError();
-    if (err != cudaSuccess) {
-        std::cerr << "CUDA memcpy to host error: " << cudaGetErrorString(err) << std::endl;
-        return -1;
-    }
 
     // Print the first and last elements of the resulting array
     std::cout << "First element of resulting array: " << hB[0] << std::endl;

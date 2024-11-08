@@ -15,4 +15,9 @@ rm -f task3
 nvcc task3.cu vscale.cu -Xcompiler -O3 -Xcompiler -Wall -Xptxas -O3 -std=c++17 -o task3
 
 # Run program
-./task3
+for exp in {10..29}; do
+    n=$((2**exp))
+    time_taken=$(./task3 $n | head -n 1)
+    echo $time_taken >> zhuHW5T3.out
+
+done
