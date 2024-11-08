@@ -1,0 +1,5 @@
+0 1 2 3 4 5 6
+6 5 4 3 2 1 0
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+            585701 instructi zhuHW1T6    skzhu  R       0:01      1 euler21
+Job starts in directory: /srv/home/skzhu/repo759/HW01
