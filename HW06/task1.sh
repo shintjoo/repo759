@@ -16,10 +16,6 @@ rm -f zhuHW6T1_1024.out zhuHW6T1_512.out
 TIME_1024="zhuHW6T1_1024.out"
 TIME_512="zhuHW6T1_512.out"
 
-# Initialize time data files
-echo "n,time_ms" > $TIME_1024
-echo "n,time_ms" > $TIME_512
-
 # Compile the program
 nvcc task1.cu matmul.cu -Xcompiler -O3 -Xcompiler -Wall -Xptxas -O3 -std c++17 -o task1
 
@@ -29,9 +25,9 @@ for i in {5..14}; do
 
     # Run with threads_per_block = 1024
     TIME=$(./task1 $n 1024 | tail -n 1)
-    echo "$n,$TIME" >> $TIME_1024
+    echo "$TIME" >> $TIME_1024
 
     # Run with threads_per_block = 512
     TIME=$(./task1 $n 512 | tail -n 1)
-    echo "$n,$TIME" >> $TIME_512
+    echo "$TIME" >> $TIME_512
 done
