@@ -62,7 +62,7 @@ int main(int argc, char* argv[]) {
     std::cout << C[n * n - 1] << std::endl;
 
     // Print elapsed time
-    std::cout << elapsed_time_ms << " ms" << std::endl;
+    std::cout << elapsed_time_ms << std::endl;
 
     // Free device memory
     cudaFree(d_A);
