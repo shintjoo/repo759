@@ -20,6 +20,9 @@ TIME_512="zhuHW6T1_512.out"
 echo "n,time_ms" > $TIME_1024
 echo "n,time_ms" > $TIME_512
 
+# Compile the program
+nvcc task1.cu matmul.cu -Xcompiler -O3 -Xcompiler -Wall -Xptxas -O3 -std c++17 -o task1
+
 # Run task1 for n = 2^5, 2^6, ..., 2^14
 for i in {5..14}; do
     n=$((2**i))
