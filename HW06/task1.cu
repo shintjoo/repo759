@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
     // Deal with input values
     if (argc != 3) {
         std::cerr << "Wrong inputs";
-        return EXIT_FAILURE;
+        return -1;
     }
     size_t n = std::atoi(argv[1]);
     unsigned int threads_per_block = std::atoi(argv[2]);

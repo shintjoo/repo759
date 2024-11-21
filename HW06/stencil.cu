@@ -7,7 +7,6 @@ __global__ void stencil_kernel(const float* image, const float* mask, float* out
 
     float* sharedImage = sharedData;  
     float* sharedMask = sharedData + blockDim.x + 2 * R;
-    float* shared_output = sharedMask + (2 * R + 1);
 
     unsigned int tid = threadIdx.x;
     int idx = blockIdx.x * blockDim.x + tid;
