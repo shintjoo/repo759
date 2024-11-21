@@ -7,7 +7,7 @@
 
 int main(int argc, char* argv[]) {
     // Deal with input values
-    if (argc != 3) {
+    if (argc != 4) {
         std::cerr << "Wrong inputs";
         return -1;
     }
