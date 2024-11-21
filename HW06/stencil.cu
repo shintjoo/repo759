@@ -2,7 +2,7 @@
 #include <iostream>
 #include "stencil.cuh"
 
-__global__ void stencil_kernel(const float *image, const float *mask, float *output, unsigned int n, unsigned int R)
+__global__ void stencil_kernel(const float* image, const float* mask, float* output, unsigned int n, unsigned int R)
 {
     // Shared memory
     extern __shared__ float sharedData[];
