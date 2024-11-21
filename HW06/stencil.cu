@@ -1,3 +1,5 @@
+#include <cuda.h>
+#include <iostream>
 #include "stencil.cuh"
 
 __global__ void stencil_kernel(const float* image, const float* mask, float* output, unsigned int n, int R)
@@ -66,8 +68,13 @@ __host__ void stencil(const float* image,
                       unsigned int R,
                       unsigned int threads_per_block)
 {
+    // Define num threads and num blocks
     int blocks = (n + threads_per_block - 1) / threads_per_block;
     int sharedMem = (threads_per_block + 2 * R) + (2 * R + 1);
+
+    // Launch Kernel
     stencil_kernel<<<blocks, threads_per_block, sharedMem * sizeof(float)>>>(image, mask, output, n, R);
+    
+    // Synchronize the device
     cudaDeviceSynchronize();
 }

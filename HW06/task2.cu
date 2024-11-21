@@ -2,6 +2,7 @@
 #include <vector>
 #include <random>
 #include <cuda_runtime.h>
+#include <cuda.h>
 #include "stencil.cuh"
 
 int main(int argc, char* argv[]) {

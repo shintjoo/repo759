@@ -1,3 +1,5 @@
+#include <cuda.h>
+#include <iostream>
 #include "matmul.cuh"
 
 __global__ void matmul_kernel(const float* A, const float* B, float* C, size_t n){
