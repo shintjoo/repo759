@@ -62,6 +62,12 @@ int main(int argc, char* argv[]) {
     // Copy result matrix back to host
     cudaMemcpy(h_output, d_output, n * sizeof(float), cudaMemcpyDeviceToHost);
 
+    // Print the last element of matrix h_output
+    std::cout << h_output[n - 1] << std::endl;
+
+    // Print elapsed time
+    std::cout << elapsed_time_ms << std::endl;
+
     // Free host memory
     delete[] h_image;
     delete[] h_mask;
