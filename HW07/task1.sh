@@ -14,7 +14,7 @@ module load gcc/11.3.0
 nvcc task1.cu matmul.cu -Xcompiler -O3 -Xcompiler -Wall -Xptxas -O3 -std=c++17 -o task1
 
 # Run task1 for n = 2^5, 2^6, ..., 2^14
-for ((i=5; i<=14; i++)); do
+for i in {5..14}; do
     n=$((2**i))
 
     ./task1 $n 16 >> zhuHW7T1.out
