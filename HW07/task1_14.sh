@@ -4,7 +4,7 @@
 #SBATCH -p instruction
 #SBATCH --ntasks=1
 #SBATCH --gpus-per-task=1
-#SBATCH -t 0-00:05:00
+#SBATCH -t 0-00:30:00
 #SBATCH -o zhuHW7T1.out -e zhuHW7T1.err
 
 module load nvidia/cuda/11.8.0
