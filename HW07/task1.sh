@@ -3,7 +3,7 @@
 #SBATCH -J zhuHW7T1
 #SBATCH -p instruction
 #SBATCH --ntasks=1
-#SBATCH --gpus-per-task=1
+#SBATCH --gres=gpu:1
 #SBATCH -t 0-00:30:00
 #SBATCH -o zhuHW7T1.out -e zhuHW7T1.err
 
