@@ -235,14 +235,10 @@ int run_matmul_int(unsigned int n, unsigned int size, unsigned int block_dim)
     // Copy the result from device back to host
     cudaMemcpy(h_c, d_c, size * sizeof(int), cudaMemcpyDeviceToHost);
 
-    // Print the last element of the resulting matrix.
-    printf("%d\n", h_c[0]);
-
-    // Print the last element of the resulting matrix.
-    printf("%d\n", h_c[size - 1]);
-
-    // Print the amount of time taken to execute the kernel in milliseconds
-    printf("%f\n", ms);
+    std::cout << "Testing matmul_1 (int)\n";
+    std::cout << h_a[0] << std::endl;
+    std::cout << h_a[n * n - 1] << std::endl;
+    std::cout << ms << " ms\n";
 
     cudaFree(d_a);
     cudaFree(d_b);
@@ -339,12 +335,10 @@ int run_matmul_float(unsigned int n, unsigned int size, unsigned int block_dim)
     // Copy the result from device back to host
     cudaMemcpy(h_c, d_c, size * sizeof(float), cudaMemcpyDeviceToHost);
 
-    // Print the first and last elements of the resulting matrix
-    printf("%f\n", h_a[0]);
-    printf("%f\n", h_a[size - 1]);
-
-    // Print the amount of time taken to execute the kernel
-    printf("%f\n", ms);
+    std::cout << "Testing matmul_2 (float)\n";
+    std::cout << h_a[0] << std::endl;
+    std::cout << h_a[n * n - 1] << std::endl;
+    std::cout << ms << " ms\n";
 
     // Cleanup
     cudaFree(d_a);
@@ -442,12 +436,10 @@ int run_matmul_double(unsigned int n, unsigned int size, unsigned int block_dim)
     // Copy the result from device back to host
     cudaMemcpy(h_c, d_c, size * sizeof(double), cudaMemcpyDeviceToHost);
 
-    // Print the first and last elements of the resulting matrix
-    printf("%f\n", h_a[0]);
-    printf("%f\n", h_a[size - 1]);
-
-    // Print the amount of time taken to execute the kernel
-    printf("%f\n", ms);
+    std::cout << "Testing matmul_3 (double)\n";
+    std::cout << h_a[0] << std::endl;
+    std::cout << h_a[n * n - 1] << std::endl;
+    std::cout << ms << " ms\n";
 
     // Cleanup
     cudaFree(d_a);
