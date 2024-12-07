@@ -16,7 +16,7 @@ rm -f zhuHW7T1.out zhuHW7T1.err
 nvcc task1.cu matmul.cu -Xcompiler -O3 -Xcompiler -Wall -Xptxas -O3 -std=c++17 -o task1
 
 # Run task1 for n = 2^5, 2^6, ..., 2^14
-for i in {5..14}; do
+for i in {5..15}; do
     n=$((2**i))
 
     ./task1 $n 8 >> zhuHW7T1.out
