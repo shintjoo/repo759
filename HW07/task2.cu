@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
     std::cout << result << std::endl;
 
     // Print the time taken in milliseconds
-    std::cout << milliseconds << std::endl;
+    std::cout << milliseconds << "ms" << std::endl;
 
     // Free host and device memory
     delete[] h_input;

@@ -19,9 +19,9 @@ nvcc task2.cu reduce.cu -Xcompiler -O3 -Xcompiler -Wall -Xptxas -O3 -std=c++17 -
 for i in {10..29}; do
     n=$((2**i))
 
-    ./task2 $n 256 >> zhuHW7T1_256.out
+    ./task2 $n 256 >> zhuHW7T2_256.out
 
-    ./task2 $n 1024 >> zhuHW7T1_1024.out
+    ./task2 $n 1024 >> zhuHW7T2_1024.out
 done
 
 # Clean up
