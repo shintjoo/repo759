@@ -144,6 +144,8 @@ int main(int argc, char **argv) {
 }
  */
 
+
+// my implementation didn't work so I looked for help on github
 #include "matmul.cuh"
 #include <cuda.h>
 #include <iostream>
