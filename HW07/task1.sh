@@ -16,8 +16,8 @@ nvcc task1.cu matmul.cu -Xcompiler -O3 -Xcompiler -Wall -Xptxas -O3 -std=c++17 -
 # Run task1 for n = 2^5, 2^6, ..., 2^14
 for i in {5..15}; do
     n=$((2**i))
-    echo "Running task1 for n = $n" >> task1_b.out
-    ./task1 $n 8 >> zhuHW7T1.out
+    echo "Running task1 for n = $n" >> zhuHW7T1.out
+    ./task1 $n 16 >> zhuHW7T1.out
 done
 
 # Clean up
