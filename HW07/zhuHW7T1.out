@@ -1,0 +1,108 @@
+Testing matmul_1 (int)
+-8
+-9
+75.9058 ms
+Testing matmul_2 (float)
+1.84671
+3.75804
+0.039936 ms
+Testing matmul_3 (double)
+-3.32807
+1.20531
+0.03312 ms
+Testing matmul_1 (int)
+-6
+-8
+0.832512 ms
+Testing matmul_2 (float)
+-7.21715
+7.85242
+0.04176 ms
+Testing matmul_3 (double)
+-0.106533
+-2.62848
+0.041984 ms
+Testing matmul_1 (int)
+6
+-4
+0.739456 ms
+Testing matmul_2 (float)
+-5.09492
+-9.19696
+0.044704 ms
+Testing matmul_3 (double)
+-1.87724
+-6.1728
+0.05248 ms
+Testing matmul_1 (int)
+6
+7
+0.928544 ms
+Testing matmul_2 (float)
+-3.57443
+-4.71758
+0.072736 ms
+Testing matmul_3 (double)
+-1.79603
+-0.0859025
+0.129344 ms
+Testing matmul_1 (int)
+7
+4
+0.991808 ms
+Testing matmul_2 (float)
+-4.18555
+9.39975
+0.274784 ms
+Testing matmul_3 (double)
+3.09309
+0.653421
+0.718688 ms
+Testing matmul_1 (int)
+-9
+-7
+2.66826 ms
+Testing matmul_2 (float)
+5.28019
+-3.46409
+1.83834 ms
+Testing matmul_3 (double)
+-2.58074
+5.97949
+5.44294 ms
+Testing matmul_1 (int)
+0
+4
+15.2219 ms
+Testing matmul_2 (float)
+9.89294
+-2.93682
+14.2852 ms
+Testing matmul_3 (double)
+-7.32341
+-9.20214
+42.9291 ms
+Testing matmul_1 (int)
+10
+-7
+119.256 ms
+Testing matmul_2 (float)
+4.79746
+-8.11002
+118.031 ms
+Testing matmul_3 (double)
+-5.90856
+-9.55989
+335.455 ms
+Testing matmul_1 (int)
+-6
+-4
+1757.33 ms
+Testing matmul_2 (float)
+9.73498
+2.6769
+1747.37 ms
+Testing matmul_3 (double)
+0.982165
+-4.67746
+2746.96 ms
